@@ -1,9 +1,8 @@
-# dbt+spark simple pipeline
+# dbt+elementary test pipeline
 
-This is a practice dbt+spark pipeline with delta and elementary observability. 
-Meant for learning purposes.
+This is a practice dbt+elementary pipeline meant for learning purposes.
 
-Steps to execute.
+Steps to execute:
 
 1. Set up postgreSQL.
 ```
