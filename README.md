@@ -9,12 +9,12 @@ Steps to execute:
 docker compose up -d
 ```
 
-2. Create .env file from .env.example one and run the script to export the vars.
+2. Create the .env file from the example one and run the script to export the environment variables.
 ```
 source scripts/source-env 
 ```
 
-3. Install libraries.
+3. Install dependencies with poetry.
 ```
 poetry install
 source scripts/source-env 
