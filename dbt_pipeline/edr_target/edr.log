@@ -155,3 +155,283 @@ Runtime Error
 2024-12-16 11:29:21 — DEBUG — Result bytes size for command '['--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_models_latest_invocation", "macro_args": {}}', '--project-dir', '/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project']' is 8442
 2024-12-16 11:29:21 — INFO — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_models_latest_invocations_data", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
 2024-12-16 11:29:22 — DEBUG — Result bytes size for command '['--log-format', 'json', 'run-operation', 'elementary.log_macro_results', '--args', '{"macro_name": "elementary_cli.get_models_latest_invocations_data", "macro_args": {}}', '--project-dir', '/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project']' is 828
+2024-12-16 11:45:18 — INFO — Running with edr=0.16.1
+2024-12-16 11:45:18 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_latest_invocation", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:45:18 — ERROR — Unable to get the latest invocation: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.[0m
+2024-12-16 11:45:18 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_adapter_type_and_unique_id", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+2024-12-16 11:45:18 — DEBUG — Could not get warehouse info.
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/data_monitoring/data_monitoring.py", line 140, in _get_warehouse_info
+    self.internal_dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:45:18 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_elementary_database_and_schema", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:45:18 — ERROR — Failed to parse Elementary's database and schema.[0m
+2024-12-16 11:45:18 — INFO — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_test_results", "macro_args": {"days_back": 7, "invocations_per_test": 720, "disable_passed_test_metrics": false}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:45:18 — ERROR — Could not generate the report - Error: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+Please reach out to our community for help with this issue.[0m
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/report/report.py", line 50, in get_report_data
+    tests_api = TestsAPI(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 43, in __init__
+    self.test_results_db_rows = self._get_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 55, in _get_test_results_db_rows
+    return self.tests_fetcher.get_all_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/fetchers/tests/tests.py", line 25, in get_all_test_results_db_rows
+    run_operation_response = self.dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:45:58 — INFO — Running with edr=0.16.1
+2024-12-16 11:45:58 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_latest_invocation", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:45:58 — ERROR — Unable to get the latest invocation: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.[0m
+2024-12-16 11:45:58 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_adapter_type_and_unique_id", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+2024-12-16 11:45:58 — DEBUG — Could not get warehouse info.
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/data_monitoring/data_monitoring.py", line 140, in _get_warehouse_info
+    self.internal_dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:45:58 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_elementary_database_and_schema", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:45:58 — ERROR — Failed to parse Elementary's database and schema.[0m
+2024-12-16 11:45:58 — INFO — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_test_results", "macro_args": {"days_back": 7, "invocations_per_test": 720, "disable_passed_test_metrics": false}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:45:58 — ERROR — Could not generate the report - Error: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+Please reach out to our community for help with this issue.[0m
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/report/report.py", line 50, in get_report_data
+    tests_api = TestsAPI(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 43, in __init__
+    self.test_results_db_rows = self._get_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 55, in _get_test_results_db_rows
+    return self.tests_fetcher.get_all_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/fetchers/tests/tests.py", line 25, in get_all_test_results_db_rows
+    run_operation_response = self.dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:47:09 — INFO — Running with edr=0.16.1
+2024-12-16 11:47:09 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_latest_invocation", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:47:09 — ERROR — Unable to get the latest invocation: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.[0m
+2024-12-16 11:47:09 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_adapter_type_and_unique_id", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+2024-12-16 11:47:09 — DEBUG — Could not get warehouse info.
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/data_monitoring/data_monitoring.py", line 140, in _get_warehouse_info
+    self.internal_dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:47:09 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_elementary_database_and_schema", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:47:09 — ERROR — Failed to parse Elementary's database and schema.[0m
+2024-12-16 11:47:09 — INFO — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_test_results", "macro_args": {"days_back": 7, "invocations_per_test": 720, "disable_passed_test_metrics": false}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:47:09 — ERROR — Could not generate the report - Error: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+Please reach out to our community for help with this issue.[0m
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/report/report.py", line 50, in get_report_data
+    tests_api = TestsAPI(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 43, in __init__
+    self.test_results_db_rows = self._get_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 55, in _get_test_results_db_rows
+    return self.tests_fetcher.get_all_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/fetchers/tests/tests.py", line 25, in get_all_test_results_db_rows
+    run_operation_response = self.dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:49:17 — INFO — Running with edr=0.16.1
+2024-12-16 11:49:17 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_latest_invocation", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:49:17 — ERROR — Unable to get the latest invocation: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.[0m
+2024-12-16 11:49:17 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_adapter_type_and_unique_id", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+2024-12-16 11:49:17 — DEBUG — Could not get warehouse info.
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/data_monitoring/data_monitoring.py", line 140, in _get_warehouse_info
+    self.internal_dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:49:17 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_elementary_database_and_schema", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:49:17 — ERROR — Failed to parse Elementary's database and schema.[0m
+2024-12-16 11:49:17 — INFO — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_test_results", "macro_args": {"days_back": 7, "invocations_per_test": 720, "disable_passed_test_metrics": false}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:49:17 — ERROR — Could not generate the report - Error: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+Please reach out to our community for help with this issue.[0m
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/report/report.py", line 50, in get_report_data
+    tests_api = TestsAPI(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 43, in __init__
+    self.test_results_db_rows = self._get_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 55, in _get_test_results_db_rows
+    return self.tests_fetcher.get_all_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/fetchers/tests/tests.py", line 25, in get_all_test_results_db_rows
+    run_operation_response = self.dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:52:13 — INFO — Running with edr=0.16.1
+2024-12-16 11:52:13 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_latest_invocation", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:52:13 — ERROR — Unable to get the latest invocation: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.[0m
+2024-12-16 11:52:13 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_adapter_type_and_unique_id", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+2024-12-16 11:52:13 — DEBUG — Could not get warehouse info.
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/data_monitoring/data_monitoring.py", line 140, in _get_warehouse_info
+    self.internal_dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:52:13 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_elementary_database_and_schema", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:52:13 — ERROR — Failed to parse Elementary's database and schema.[0m
+2024-12-16 11:52:13 — INFO — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_test_results", "macro_args": {"days_back": 7, "invocations_per_test": 720, "disable_passed_test_metrics": false}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:52:13 — ERROR — Could not generate the report - Error: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+Please reach out to our community for help with this issue.[0m
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/report/report.py", line 50, in get_report_data
+    tests_api = TestsAPI(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 43, in __init__
+    self.test_results_db_rows = self._get_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 55, in _get_test_results_db_rows
+    return self.tests_fetcher.get_all_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/fetchers/tests/tests.py", line 25, in get_all_test_results_db_rows
+    run_operation_response = self.dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:53:07 — INFO — Running with edr=0.16.1
+2024-12-16 11:53:07 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_latest_invocation", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:53:07 — ERROR — Unable to get the latest invocation: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.[0m
+2024-12-16 11:53:07 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_adapter_type_and_unique_id", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+2024-12-16 11:53:07 — DEBUG — Could not get warehouse info.
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/data_monitoring/data_monitoring.py", line 140, in _get_warehouse_info
+    self.internal_dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:53:07 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_elementary_database_and_schema", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:53:07 — ERROR — Failed to parse Elementary's database and schema.[0m
+2024-12-16 11:53:07 — INFO — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_test_results", "macro_args": {"days_back": 7, "invocations_per_test": 720, "disable_passed_test_metrics": false}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:53:07 — ERROR — Could not generate the report - Error: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+Please reach out to our community for help with this issue.[0m
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/report/report.py", line 50, in get_report_data
+    tests_api = TestsAPI(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 43, in __init__
+    self.test_results_db_rows = self._get_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 55, in _get_test_results_db_rows
+    return self.tests_fetcher.get_all_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/fetchers/tests/tests.py", line 25, in get_all_test_results_db_rows
+    run_operation_response = self.dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:53:30 — INFO — Running with edr=0.16.1
+2024-12-16 11:53:30 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_latest_invocation", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:53:30 — ERROR — Unable to get the latest invocation: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.[0m
+2024-12-16 11:53:30 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_adapter_type_and_unique_id", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+2024-12-16 11:53:30 — DEBUG — Could not get warehouse info.
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/data_monitoring/data_monitoring.py", line 140, in _get_warehouse_info
+    self.internal_dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+2024-12-16 11:53:30 — DEBUG — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_elementary_database_and_schema", "macro_args": {}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:53:30 — ERROR — Failed to parse Elementary's database and schema.[0m
+2024-12-16 11:53:30 — INFO — Running dbt command --log-format json run-operation elementary.log_macro_results --args {"macro_name": "elementary_cli.get_test_results", "macro_args": {"days_back": 7, "invocations_per_test": 720, "disable_passed_test_metrics": false}} --project-dir /Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/dbt_project
+[31;20m2024-12-16 11:53:30 — ERROR — Could not generate the report - Error: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.
+Please reach out to our community for help with this issue.[0m
+Traceback (most recent call last):
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/report/report.py", line 50, in get_report_data
+    tests_api = TestsAPI(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 43, in __init__
+    self.test_results_db_rows = self._get_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/api/tests/tests.py", line 55, in _get_test_results_db_rows
+    return self.tests_fetcher.get_all_test_results_db_rows(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/monitor/fetchers/tests/tests.py", line 25, in get_all_test_results_db_rows
+    run_operation_response = self.dbt_runner.run_operation(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 177, in run_operation
+    result = self._run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/command_line_dbt_runner.py", line 114, in _run_command
+    result = self._inner_run_command(
+  File "/Users/emif/Documents/mutt/dbt-elementary-test-lab/.venv/lib/python3.10/site-packages/elementary/clients/dbt/api_dbt_runner.py", line 53, in _inner_run_command
+    raise DbtCommandError(
+elementary.exceptions.exceptions.DbtCommandError: Failed to run dbt command.
+Path '/Users/emif/.dbt' does not exist.

@@ -1,6 +1,6 @@
-dbt_elementary_lab:
+elementary_tutorial:
   outputs:
-    local:
+    dev:
       dbname: elementary
       host: localhost
       pass: elementary
@@ -8,8 +8,8 @@ dbt_elementary_lab:
       schema: elementary
       threads: 1
       type: postgres
-      user: elementary
-  target: local
+      user: elementary   
+  target: dev
 
 elementary:
   outputs:
