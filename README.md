@@ -35,3 +35,5 @@ poetry run dbt test
 ```
 poetry run edr report
 ```
+
+7. To see the data, you can use the DB client of your preference and create a connection using the db credential you'll find in the profiles.yml file.
